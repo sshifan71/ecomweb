@@ -1,0 +1,13 @@
+{% extends "app/base.html" %}
+{% load static %}
+{% block title %}Home{% endblock title %}
+
+{% block main-content %}
+Are you sure you want to LOG OUT???
+<form method="POST" action="{% url 'logout' %}">
+    {% csrf_token %}
+    <button type="submit" style="background:none;border:none;color:blue;text-decoration:underline;cursor:pointer;">
+        Logout
+    </button>
+</form>
+{% endblock main-content %}
